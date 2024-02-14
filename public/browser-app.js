@@ -49,9 +49,9 @@ btnDOM.addEventListener('click', async () => {
         Authorization: `Bearer ${token}`,
       },
     })
-    resultDOM.innerHTML = `<h5>${data.msg}</h5><p>${data.secret}</p>`
+    resultDOM.innerHTML = `<h5>${data.message}</h5><p>${data.info}</p><p>${data.details}</p>`
 
-    data.secret
+    // data.secret
   } catch (error) {
     localStorage.removeItem('token')
     resultDOM.innerHTML = `<p>${error.response.data.msg}</p>`
